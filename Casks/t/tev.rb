@@ -1,21 +1,19 @@
 cask "tev" do
   arch intel: "-intel"
 
-  version "2.2"
-  sha256 arm:   "2068cb3d5516e325d459bfa1a6816d7a9245f736be7f23eaf01bacdb8d707b6d",
-         intel: "5ad9a44afd6e8d1dd89db347f44e6425aa86fbab036aa0a2bfb51535c7d11228"
+  version "2.3.2"
+  sha256 arm:   "3aee171b17e74c2bfe6ceb4bc504c2582dae58fc475dc6f8c4e6f140d3aa9a71",
+         intel: "4ca9bc5b8ce158668e32a6081f2290690cfd3b2d6716515bc235be09c1e911e6"
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.dmg"
   name "tev"
-  desc "HDR image comparison tool with an emphasis on OpenEXR images"
+  desc "High dynamic range (HDR) image viewer with accurate color management"
   homepage "https://github.com/Tom94/tev"
 
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

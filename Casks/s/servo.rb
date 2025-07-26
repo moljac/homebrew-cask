@@ -1,6 +1,6 @@
 cask "servo" do
-  version "2025-07-22"
-  sha256 "772e255f4b5b290fc8be7b05391dbbf68bb723aa72d3f56e680f4f08df536d41"
+  version "2025-07-26"
+  sha256 "0ad051f71f4c2bd867570f8de49bcf9b3c16aa41acf52946f2c9cb2c3995aec9"
 
   url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-latest.dmg",
       verified: "github.com/servo/servo-nightly-builds/"
@@ -13,6 +13,8 @@ cask "servo" do
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :ventura"
 

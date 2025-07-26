@@ -1,9 +1,9 @@
 cask "zed@preview" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.196.5"
-  sha256 arm:   "97d64f2d80a2fb6ce1cb7eef663546411363900c693a89b78ae04691befe5297",
-         intel: "70e69c7785a43615cea6ccead2cd91624a82248e9ab33876e83d360f330cd6ce"
+  version "0.197.1"
+  sha256 arm:   "57bd2628cf89246c361fff4277a21472ee327e0829c8e3f59522dee55d042d95",
+         intel: "8d549cf6c146c513093532b510490c0e8a26f7d242afa121c2a47d3f9152d123"
 
   url "https://zed.dev/api/releases/preview/#{version}/Zed-#{arch}.dmg"
   name "Zed Preview"
@@ -28,6 +28,7 @@ cask "zed@preview" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed-preview.sfl*",
     "~/Library/Application Support/Zed",
     "~/Library/Caches/dev.zed.Zed-Preview",
+    "~/Library/Caches/Zed",
     "~/Library/HTTPStorages/dev.zed.Zed-Preview",
     "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed-Preview.plist",
